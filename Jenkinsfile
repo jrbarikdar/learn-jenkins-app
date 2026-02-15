@@ -23,7 +23,7 @@ pipeline {
         stage ('Test'){
             steps {
                 sh '''
-                test -f Jenkinsfile
+                test -f build/index.html
                 '''
             }
         }
