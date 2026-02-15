@@ -39,7 +39,7 @@ pipeline {
                 stage('E2E') {
                     agent {
                         docker {
-                            image 'mcr.microsoft.com/playwright:v1.58.2-noble'
+                            image 'mcr.microsoft.com/playwright:v1.39.0-noble'
                             reuseNode true
                         }
                     }
@@ -63,8 +63,8 @@ pipeline {
             }
             steps {
                 sh '''
-                    npm install -g netlify-cli
-                    netlify --version
+                    npm install netlify-cli
+                    node_modules/.bin/netlify --version
                 '''
             }
         }
